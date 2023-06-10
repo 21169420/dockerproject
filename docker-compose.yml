@@ -2,15 +2,15 @@
 version: "3"
 services:
   movie:
-    image: rahamshaik/phonepaymovies:v1
+    image: paytm:v1
     ports:
-      - 8000:80
+      - 1000:80
     volumes:
       - volume1
     deploy:
       replicas: 4
   train:
-    image: rahamshaik/phonepaytrains:v1
+    image: paytrain:v1
     volumes:
       - volume2
     ports:
@@ -18,7 +18,7 @@ services:
     deploy:
       replicas: 4
   recharge:
-    image: rahamshaik/phonepayrecharges:v1
+    image: paymovie:v1
     volumes:
       - volume3
     ports:
